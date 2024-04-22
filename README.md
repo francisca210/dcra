@@ -52,7 +52,7 @@
 
 ## Figure 4 - NoC
 
-    exp_dcra/run_exp_noc_bw.sh 9 0 4 64
+    exp_dcra/run_exp_noc_bw.sh 9 0 4
 
 
 ## Figure 5 - SRAM
@@ -71,13 +71,13 @@
     exp_dcra/run_exp_pufreq.sh 9 0 4 64
 
 
-## Figures 8 and 9
-
-    exp_dcra/run_exp_packages.sh 9 0 3 Kron25
-    exp_dcra/run_exp_packages.sh 9 0 3 Kron26
-
-
-## Figure 10 - Scaling Plot
+## Figure 10 - Scaling Plot. (Dependency from Fig5)
 
     exp_dcra/run_exp_scaling_dcra.sh 9 1 3 Kron25
-    exp_dcra/run_exp_scaling_dcra.sh 9 1 3 Kron26
+
+
+## Figures 8 and 9. (Dependency from Fig5 and Fig10)
+
+    exp_dcra/run_exp_packages.sh 9 3 3 Kron25
+    exp_dcra/run_exp_packages.sh 9 1 3 Kron26
+
